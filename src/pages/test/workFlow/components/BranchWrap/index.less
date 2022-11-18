@@ -1,0 +1,285 @@
+// branchWrap
+.branchWrap {
+  display: inline-flex;
+  width: 100%;
+}
+
+.branchBoxWrap {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-height: 270px;
+}
+.branchBox {
+  position: relative;
+  display: flex;
+  height: auto;
+  min-height: 180px;
+  margin-top: 15px;
+  overflow: visible;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  .btn {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 10px;
+    color: #3296fa;
+    font-size: 12px;
+    line-height: 30px;
+    background: #fff !important;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+    transform-origin: center center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    user-select: none;
+  }
+  .btn:hover {
+    background: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%) scale(1.1);
+  }
+  .btn:active {
+    background: #fff;
+    box-shadow: none;
+    transform: translateX(-50%);
+  }
+}
+.disabledBranchBox {
+  margin-top: 0;
+  .btn {
+    display: none;
+  }
+}
+.branchBox .itemColBox {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  // background: #eaeaf4;
+  background: #f4f3f6;
+}
+.branchBox .itemColBox:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 2px;
+  height: 100%;
+  margin: auto;
+  background-color: #cacaca;
+  content: '';
+}
+// 条件左右上下线设置
+.topLeftLine {
+  left: -1px;
+}
+
+.topLeftLine,
+.topRightLine {
+  position: absolute;
+  top: -4px;
+  width: 50%;
+  height: 8px;
+  // 要跟系统一个颜色
+  // background-color: #eaeaf4;
+  background-color: #f4f3f6;
+}
+
+.topRightLine {
+  right: -1px;
+}
+
+.bottomLeftLine {
+  left: -1px;
+}
+
+.bottomLeftLine,
+.bottomRightLine {
+  position: absolute;
+  bottom: -4px;
+  width: 50%;
+  height: 8px;
+  // 要跟系统一个颜色
+  // background-color: #eaeaf4;
+  background-color: #f4f3f6;
+}
+
+.bottomRightLine {
+  right: -1px;
+}
+
+.conditionNode {
+  min-height: 220px;
+}
+.conditionNode,
+.conditionNodeBox {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.conditionNodeBox {
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.conditionNodeBox:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  margin: auto;
+  background-color: #cacaca;
+  content: '';
+}
+
+.autoJudge {
+  position: relative;
+  width: 220px;
+  min-height: 72px;
+  padding: 14px 19px;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.autoJudge:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  content: '';
+  pointer-events: none;
+}
+// .autoJudge.active:after,
+.disabledAutoJudge:active:after,
+.disabledAutoJudge:hover:after {
+  border: 1px solid #3296fa;
+  box-shadow: 0 0 6px 0 rgba(50, 150, 250, 0.3);
+}
+
+.autoJudge.active.levelClose .close,
+.autoJudge:active .levelClose .close,
+.autoJudge:hover .levelClose .close {
+  visibility: visible !important;
+}
+
+.autoJudge.error:after {
+  border: 1px solid #f25643;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+// 前进-后退 按钮样式
+.autoJudge .sortLeft,
+.autoJudge .sortRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+
+.autoJudge .sortLeft {
+  left: 0;
+  border-right: 1px solid #f6f6f6;
+}
+.autoJudge .sortRight {
+  right: 0;
+  border-left: 1px solid #f6f6f6;
+}
+
+.autoJudge:hover .sortLeft,
+.autoJudge:hover .sortRight {
+  display: flex;
+  align-items: center;
+  color: #717171;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.autoJudge .sortLeft:hover,
+.autoJudge .sortRight:hover {
+  background: #efefef;
+}
+// 描述文案box
+.autoJudge .titleWrapper {
+  position: relative;
+  line-height: 16px;
+  text-align: left;
+  .filterOperate {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    .filterName {
+      color: #15bc83;
+      font-size: 12px;
+    }
+    .levelClose {
+      position: relative;
+      .priorityTitle {
+        display: inline-block;
+        margin-right: 10px;
+        color: rgba(25, 31, 37, 0.56);
+      }
+      .close {
+        position: absolute;
+        top: -9px;
+        right: -6px;
+        color: #c3c3c3;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .content {
+    display: -webkit-box;
+    margin-top: 10px;
+    overflow: hidden;
+    color: #191f25;
+    font-size: 14px;
+    text-align: left;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.errorTip {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: rgb(242, 86, 67);
+  font-size: 24px;
+  transform: translate(150%, 0px);
+}
+
+.none {
+  display: none !important;
+}

@@ -1,0 +1,93 @@
+.addNodeBtnBox {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 240px;
+  -ms-flex-negative: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 2px;
+    height: 100%;
+    margin: auto;
+    background-color: #cacaca;
+    content: '';
+  }
+  .addNodeBtn {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 240px;
+    padding: 20px 0 32px;
+    user-select: none;
+    -webkit-box-pack: center;
+    -webkit-box-flex: 1;
+
+    .btn:hover {
+      box-shadow: 0 13px 27px 0 rgba(0, 0, 0, 0.1);
+      transform: scale(1.3);
+    }
+    .btn:active {
+      background: #1991eb;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      transform: none;
+    }
+  }
+  .hidden {
+    padding: 0px 0 32px;
+    visibility: hidden !important;
+  }
+}
+// popver
+.popverBody {
+  display: flex;
+  .popverItem {
+    flex: 1;
+    margin-right: 10px;
+    color: #191f25 !important;
+    text-align: center;
+    cursor: pointer;
+    .itemBtn {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 5px;
+      border: 1px solid #e2e2e2;
+    }
+    .itemBtn:hover {
+      // background: #1991eb;
+      background: #3296fa;
+      box-shadow: 0 10px 20px 0 rgba(50, 150, 250, 0.4);
+    }
+    .itemBtn:active {
+      background: #eaeaea;
+      box-shadow: none;
+    }
+    .popverIcon,
+    .copyerIcon,
+    .conditionIcon {
+      font-size: 35px;
+    }
+    .popverIcon:hover,
+    .copyerIcon:hover,
+    .conditionIcon:hover {
+      color: #fff;
+    }
+    .popverIcon {
+      color: #ff943e;
+    }
+    .copyerIcon {
+      color: #1991eb;
+    }
+    .conditionIcon {
+      color: #15bc83;
+    }
+  }
+}

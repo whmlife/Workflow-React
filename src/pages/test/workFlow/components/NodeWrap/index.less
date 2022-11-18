@@ -1,0 +1,119 @@
+// .nodeWrap
+.nodeWrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 50px;
+}
+.nodeWrapBox {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 220px;
+  min-height: 72px;
+  background: #fff;
+  border: 1px solid #eaeaf4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nodeWrapHoverBox.active,
+.nodeWrapHoverBox:active,
+.nodeWrapHoverBox:hover {
+  border: 1px solid #3296fa;
+  box-shadow: 0 0 6px 0 rgba(50, 150, 250, 0.3);
+}
+
+.nodeWrapBox.error {
+  border: 1px solid #f25643;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nodeWrapBox.active .close,
+.nodeWrapBox:active .close,
+.nodeWrapBox:hover .close {
+  visibility: visible !important;
+}
+
+.nodeWrapBox .startNode::before {
+  content: none;
+}
+
+.nodeWrapBox .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 24px;
+  padding-right: 6px;
+  padding-left: 12px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: left;
+  background: #576a95;
+  border-radius: 4px 4px 0 0;
+}
+.nodeWrapBox .title .close {
+  font-size: 14px;
+  visibility: hidden;
+}
+.nodeWrapBox .approver {
+  background: #ff943e;
+}
+.nodeWrapBox .copy {
+  background: #1991eb;
+}
+// .nodeWrapBox .condition {
+//   background: #15bc83;
+// }
+.nodeWrapBox .content {
+  position: relative;
+  padding: 16px;
+  font-size: 14px;
+}
+.nodeWrapBox .content .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  span {
+    display: block;
+    line-height: 18px;
+    white-space: normal;
+    word-break: break-all;
+  }
+  .nodeName {
+    color: #c2c2c2;
+  }
+  .icon {
+    color: #979797;
+  }
+}
+.errorTip {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: rgb(242, 86, 67);
+  font-size: 24px;
+  transform: translate(150%, 0px);
+}
+.addMember {
+  position: absolute;
+  top: 14px;
+  right: 0px;
+  color: rgb(242, 86, 67);
+  font-size: 24px;
+  transform: translate(150%, 0px);
+}
+.none {
+  display: none !important;
+}

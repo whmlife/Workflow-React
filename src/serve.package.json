@@ -1,0 +1,12 @@
+{
+  "name": "test-flow",
+  "version": "1.0.0",
+  "description": "Serve used",
+  "scripts": {
+    "serve": "node server --title=test-flow"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "replace-in-file": "^5.0.2"
+  }
+}
