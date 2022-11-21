@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import initialState from '/Users/dfocus/Desktop/company/test-flow/src/.umi/plugin-initial-state/models/initialState';
-import model0 from "/Users/dfocus/Desktop/company/test-flow/src/models/useAppModel";
-import model1 from "/Users/dfocus/Desktop/company/test-flow/src/models/useLoginModel";
-import model2 from "/Users/dfocus/Desktop/company/test-flow/src/models/useProLayoutModel";
+import initialState from '/Users/dfocus/Desktop/company/Workflow-React/src/.umi/plugin-initial-state/models/initialState';
+import model0 from "/Users/dfocus/Desktop/company/Workflow-React/src/models/useAppModel";
+import model1 from "/Users/dfocus/Desktop/company/Workflow-React/src/models/useLoginModel";
+import model2 from "/Users/dfocus/Desktop/company/Workflow-React/src/models/useProLayoutModel";
 // @ts-ignore
 import Dispatcher from './helpers/dispatcher';
 // @ts-ignore

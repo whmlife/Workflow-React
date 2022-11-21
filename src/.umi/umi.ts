@@ -4,8 +4,8 @@ import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/dfocus/Desktop/company/test-flow/node_modules/@umijs/runtime';
-import { renderClient } from '/Users/dfocus/Desktop/company/test-flow/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/@umijs/renderer-react/dist/index.js';
 import { getRoutes } from './core/routes';
 
 

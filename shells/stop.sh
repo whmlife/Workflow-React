@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 找到本项目进程，杀之
-pid=`ps aux | grep -i 'node server --title=test-flow' | grep -v grep | awk {'print $2'}`
+pid=`ps aux | grep -i 'node server --title=workflow' | grep -v grep | awk {'print $2'}`
 
 if  [ ! -n "$pid" ] ;then
     echo "No process found, go ahead as you need"

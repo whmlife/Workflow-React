@@ -33,7 +33,7 @@ export default function useAppModel() {
     return routeMatcher ? routeMatcher.route : undefined
   }, [])
 
-  const isOpenPage = useCallback((pathname: string) => pathname.startsWith('/o/') || pathname.startsWith('/test/') ||pathname === '/', [])
+  const isOpenPage = useCallback((pathname: string) => pathname.startsWith('/o/') || pathname.startsWith('/test/') || pathname.startsWith('/workFlow') ||pathname === '/', [])
 
   return {
     width,

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType, dynamic } from '/Users/dfocus/Desktop/company/test-flow/node_modules/@umijs/runtime';
+import { ApplyPluginsType, dynamic } from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
@@ -47,14 +47,14 @@ export function getRoutes() {
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__test__frgenerator__index' */'@/pages/test/frgenerator/index.tsx')})
       },
       {
-        "path": "/test/workFlow",
+        "path": "/workFlow",
         "exact": true,
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__test__workFlow__index' */'@/pages/test/workFlow/index.tsx')})
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__workFlow__index' */'@/pages/workFlow/index.tsx')})
       },
       {
-        "path": "/test/workFlow/util",
+        "path": "/workFlow/util",
         "exact": true,
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__test__workFlow__util' */'@/pages/test/workFlow/util.tsx')})
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__workFlow__util' */'@/pages/workFlow/util.tsx')})
       }
     ]
   }

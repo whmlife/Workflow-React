@@ -1,0 +1,100 @@
+.navContent {
+  z-index: 1;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.designFlow {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: #eaeaf4;
+}
+.btn{
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.zoom {
+  position: fixed;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 125px;
+  height: 40px;
+}
+.hidden {
+  display: none;
+}
+.designFlow .boxScale {
+  position: relative;
+  display: inline-block;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-width: min-content;
+  height: 100%;
+  padding: 56px 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transform-origin: 0 0 0;
+}
+.zoom .zoomOut {
+  background-image: url(https://gw.alicdn.com/tfs/TB1s0qhBHGYBuNjy0FoXXciBFXa-90-90.png) !important;
+}
+.zoom .zoomIn {
+  background-image: url(https://gw.alicdn.com/tfs/TB1UIgJBTtYBeNjy1XdXXXXyVXa-90-90.png) !important;
+}
+.zoom .zoomIn,
+.zoom .zoomOut {
+  width: 30px;
+  height: 30px;
+  color: #c1c1cd;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+// 流程结束
+.endNode {
+  color: rgba(25, 31, 37, 0.4);
+  font-size: 14px;
+  text-align: left;
+  border-radius: 50%;
+  & > .endCirle {
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    background: #cacaca;
+    border-radius: 50%;
+  }
+  & > .endText {
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+.formBox {
+  :global {
+    .fr-container .fr-item-wrapper {
+      min-height: 20px;
+    }
+    .fr-container .fr-item-wrapper > div {
+      display: -webkit-box;
+      overflow: hidden;
+      color: #191f25;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .fr-container .error-message {
+      display: none !important;
+    }
+    .fr-container .field-block {
+      display: none;
+    }
+  }
+}

@@ -8,14 +8,14 @@ cd $DIR
 echo "Injected UMI_ENV is: " ${UMI_ENV}
 
 if  [ ! -n "$UMI_ENV" ] ;then
-    output="test-flow-zip-dist"
+    output="workflow-zip-dist"
 else
-    output="${UMI_ENV}-test-flow-zip-dist"
+    output="${UMI_ENV}-workflow-zip-dist"
 fi
 
 # 删除之前打包好的项目
 
-rm -rf ./*-zip-dist ./dist ./test-flow*.zip
+rm -rf ./*-zip-dist ./dist ./workflow*.zip
 mkdir ./${output}
 mkdir ./${output}/bin
 
@@ -47,9 +47,9 @@ cp ./src/serve.package.json ./${output}/package.json
 
 if test -n "$UMI_ENV"; then
   if [ "$(uname)" == "Darwin" ];then
-    sed -i '' 's/test-flow/'${UMI_ENV}'_test-flow/g' ./${output}/package.json
+    sed -i '' 's/workflow/'${UMI_ENV}'_workflow/g' ./${output}/package.json
   else 
-    sed -i 's/test-flow/'${UMI_ENV}'_test-flow/g' ./${output}/package.json
+    sed -i 's/workflow/'${UMI_ENV}'_workflow/g' ./${output}/package.json
   fi
 fi
 
@@ -58,9 +58,9 @@ cp ./shells/stop.sh ./${output}/bin
 
 if test -n "$UMI_ENV"; then
   if [ "$(uname)" == "Darwin" ];then
-    sed -i '' 's/test-flow/'${UMI_ENV}'_test-flow/g' ./${output}/bin/stop.sh
+    sed -i '' 's/workflow/'${UMI_ENV}'_workflow/g' ./${output}/bin/stop.sh
   else 
-    sed -i 's/test-flow/'${UMI_ENV}'_test-flow/g' ./${output}/bin/stop.sh
+    sed -i 's/workflow/'${UMI_ENV}'_workflow/g' ./${output}/bin/stop.sh
   fi
 fi
 

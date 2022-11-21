@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory, History } from '/Users/dfocus/Desktop/company/test-flow/node_modules/@umijs/runtime';
+import { createBrowserHistory, History } from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

@@ -3,15 +3,15 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from '/Users/dfocus/Desktop/company/test-flow/node_modules/react-intl';
+} from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/react-intl';
 import { ApplyPluginsType } from 'umi';
 import { event, LANG_CHANGE_EVENT } from './locale';
 // @ts-ignore
-import warning from '/Users/dfocus/Desktop/company/test-flow/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
+import warning from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
 
 import { plugin } from '../core/umiExports';
 
-export * from '/Users/dfocus/Desktop/company/test-flow/node_modules/react-intl';
+export * from '/Users/dfocus/Desktop/company/Workflow-React/node_modules/react-intl';
 
 let g_intl: IntlShape;
 
@@ -20,7 +20,7 @@ const useLocalStorage = true;
 export const localeInfo: {[key: string]: any} = {
   'en-US': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/dfocus/Desktop/company/test-flow/src/locales/en-US.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/dfocus/Desktop/company/Workflow-React/src/locales/en-US.js')),
     },
     locale: 'en-US',
     antd: {
@@ -30,7 +30,7 @@ export const localeInfo: {[key: string]: any} = {
   },
   'zh-CN': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/dfocus/Desktop/company/test-flow/src/locales/zh-CN.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/dfocus/Desktop/company/Workflow-React/src/locales/zh-CN.js')),
     },
     locale: 'zh-CN',
     antd: {

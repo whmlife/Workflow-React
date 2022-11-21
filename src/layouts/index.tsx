@@ -52,7 +52,7 @@ export default function Layout({ children, location, route }: IEntryLayoutProps)
   }
 
   if (signRequired()) {
-    return <Redirect to={{ pathname: '/test/workFlow' }} />
+    return <Redirect to={{ pathname: '/workFlow' }} />
   }
 
   return resolveAuthRequiredPage({
