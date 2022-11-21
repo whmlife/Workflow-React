@@ -215,7 +215,7 @@ function FilterCheck(props) {
     },
     [data, onChange]
   )
-
+  // 自定义表单 通过fr-generator封装实现，具体可以看/test/frgenerator
   return (
     <div className={styles.setNode}>
       <span className={styles.nodeSpan}>请选择用来区分审批流程的条件字段</span>
